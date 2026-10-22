@@ -1,0 +1,282 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    padding: 30px 15px;
+    background: linear-gradient(140deg, #d9edff, #f5f8ff);
+    color: #20354a;
+}
+
+.app {
+    max-width: 760px;
+    margin: auto;
+    background: #fff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 15px 45px #243e591a;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 30px;
+    background: linear-gradient(120deg, #2469ad, #53b9df);
+    color: white;
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.top h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.brand-icon {
+    font-size: 45px;
+}
+
+#search-form {
+    display: flex;
+    gap: 10px;
+    padding: 24px 30px 10px;
+}
+
+#city-input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid #d6e0e9;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    background: #2469ad;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #174c82;
+}
+
+#status {
+    padding: 10px 30px 20px;
+    color: #64798d;
+    font-size: 14px;
+}
+
+#weather-content {
+    padding: 10px 30px 30px;
+}
+
+.current-card {
+    padding: 25px;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #e5f5ff, #f1f3ff);
+}
+
+.location-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.location-row h2 {
+    font-size: 25px;
+    margin-bottom: 7px;
+}
+
+#current-date,
+.muted {
+    color: #657d91;
+    font-size: 14px;
+}
+
+.weather-icon {
+    font-size: 58px;
+}
+
+.condition {
+    margin-top: 24px;
+    color: #46647e;
+}
+
+.temperature {
+    font-size: 68px;
+    font-weight: bold;
+    margin: 5px 0;
+    letter-spacing: -3px;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.details div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px 10px;
+    border-radius: 12px;
+    background: #ffffffb8;
+}
+
+.details span {
+    font-size: 12px;
+    color: #61798c;
+}
+
+.details strong {
+    font-size: 16px;
+}
+
+.forecast-section {
+    margin-top: 30px;
+}
+
+.forecast-section h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.hourly-list {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.hour-card {
+    min-width: 95px;
+    padding: 15px 10px;
+    text-align: center;
+    border: 1px solid #e5edf3;
+    border-radius: 14px;
+    background: #fbfdff;
+}
+
+.hour-card span,
+.hour-card strong {
+    display: block;
+    margin-bottom: 9px;
+}
+
+.hour-icon {
+    font-size: 25px;
+}
+
+.daily-row {
+    display: grid;
+    grid-template-columns: 1fr auto 65px 1fr;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 0;
+    border-bottom: 1px solid #edf1f5;
+}
+
+.daily-icon {
+    font-size: 25px;
+}
+
+.daily-description {
+    color: #657d91;
+    font-size: 12px;
+}
+
+.daily-rain {
+    color: #317cb7;
+    font-size: 12px;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #f7fafc;
+    color: #718397;
+    font-size: 13px;
+}
+
+footer a {
+    color: #2469ad;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 500px) {
+    body {
+        padding: 12px;
+    }
+
+    .top {
+        padding: 24px 20px;
+    }
+
+    .top h1 {
+        font-size: 22px;
+    }
+
+    #search-form {
+        padding: 20px 15px 10px;
+    }
+
+    #status {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #weather-content {
+        padding: 10px 15px 25px;
+    }
+
+    .current-card {
+        padding: 18px;
+    }
+
+    .temperature {
+        font-size: 58px;
+    }
+
+    .details {
+        gap: 6px;
+    }
+
+    .details div {
+        padding: 12px 7px;
+    }
+
+    .details span {
+        font-size: 11px;
+    }
+
+    .daily-row {
+        grid-template-columns: 1fr auto 45px;
+        gap: 8px;
+    }
+
+    .daily-rain {
+        display: none;
+    }
+}

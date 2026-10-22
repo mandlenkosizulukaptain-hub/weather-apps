@@ -1,0 +1,85 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="app">
+        <header class="top">
+            <div>
+                <p class="eyebrow">WEATHER WORLD</p>
+                <h1>Weather Forecast</h1>
+                <p>Weather updates for your city</p>
+            </div>
+            <span class="brand-icon">🌍</span>
+        </header>
+
+        <form id="search-form">
+            <input
+                id="city-input"
+                type="search"
+                placeholder="Enter city, e.g. Lupane"
+                aria-label="City name"
+                required
+            >
+            <button type="submit">Search</button>
+        </form>
+
+        <p id="status" role="status">Search for a city to see its weather.</p>
+
+        <section id="weather-content" hidden>
+            <div class="current-card">
+                <div class="location-row">
+                    <div>
+                        <h2 id="city-name">City</h2>
+                        <p id="current-date"></p>
+                    </div>
+                    <span id="weather-icon" class="weather-icon">🌤️</span>
+                </div>
+
+                <p id="condition" class="condition">Weather condition</p>
+                <p class="temperature"><span id="temperature">--</span><span>°C</span></p>
+                <p id="feels-like" class="muted">Feels like --°C</p>
+
+                <div class="details">
+                    <div>
+                        <span>💧 Humidity</span>
+                        <strong id="humidity">--%</strong>
+                    </div>
+                    <div>
+                        <span>💨 Wind</span>
+                        <strong id="wind">-- km/h</strong>
+                    </div>
+                    <div>
+                        <span>🌧️ Rain chance</span>
+                        <strong id="rain">--%</strong>
+                    </div>
+                </div>
+            </div>
+
+            <section class="forecast-section">
+                <h2>Hourly forecast</h2>
+                <div id="hourly-forecast" class="hourly-list"></div>
+            </section>
+
+            <section class="forecast-section">
+                <h2>7-day forecast</h2>
+                <div id="daily-forecast" class="daily-list"></div>
+            </section>
+        </section>
+
+        <footer>
+            Weather data by
+            <a href="https://open-meteo.com/" target="_blank" rel="noreferrer">Open-Meteo</a>
+        </footer>
+    </main>
+</body>
+</html>
+
